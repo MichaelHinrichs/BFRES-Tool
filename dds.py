@@ -43,7 +43,7 @@ def readDDS(f, SRGB):
 
     if len(inb) < 0x80 or inb[:4] != b'DDS ':
         print("")
-        print(f + " is not a valid DDS file!")
+        print(f"{f} is not a valid DDS file!")
 
         return 0, 0, 0, b'', 0, [], 0, []
 
@@ -219,7 +219,7 @@ def readDDS(f, SRGB):
 
     if len(inb) < 0x80 + size + mipSize:
         print("")
-        print(f + " is not a valid DDS file!")
+        print(f"{f} is not a valid DDS file!")
 
         return 0, 0, 0, b'', 0, [], 0, []
 

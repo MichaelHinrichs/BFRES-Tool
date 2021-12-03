@@ -21,7 +21,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Python version: sanity check
-minimum = 3.4
+minimum = 3.6
 import sys
 
 currentRunningVersion = sys.version_info.major + (.1 * sys.version_info.minor)
@@ -92,7 +92,7 @@ class MainWindow(QtWidgets.QWidget):
         self.textures = []
 
     def setupUi(self):
-        self.setWindowTitle("BFRES Tool v" + globals.Version)
+        self.setWindowTitle(f"BFRES Tool v{globals.Version}")
         self.setMinimumSize(375, 0)
 
         self.openbtn = QtWidgets.QPushButton("Open")

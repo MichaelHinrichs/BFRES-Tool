@@ -247,7 +247,7 @@ def extract(tex, BFRESPath, exportAs, dontShowMsg=False):
                 return False
 
         else:
-            file = os.path.join(BFRESPath, tex.name + '.dds')
+            file = os.path.join(BFRESPath, f'{tex.name}.dds')
 
         hdr = dds.generateHeader(tex.numMips, tex.width, tex.height, format_, tex.compSel, realSize, tex.format in globals.BCn_formats)
 
@@ -255,7 +255,7 @@ def extract(tex, BFRESPath, exportAs, dontShowMsg=False):
             output.write(b''.join([hdr, b''.join(result)]))
 
     elif not dontShowMsg:
-        msg = "Can't convert: " + tex.name
+        msg = f"Can't convert: {tex.name}"
 
         if tex.aa:
             context = "Unsupported AA mode."
